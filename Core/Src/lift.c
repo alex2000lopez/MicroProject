@@ -4,7 +4,7 @@
 * @date 16/05/2021
 * @brief Lift implementation
 */
-
+#include "main.h"
 /**
 * @brief Initialize the lift
 * @param void
@@ -31,3 +31,4 @@ uint32_t liftIsMoving(void){}
 * @return 0 ground floor, 1 first floor, -1 moving
 */
 int32_t liftFloor(void){}
+	
