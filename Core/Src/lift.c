@@ -5,12 +5,29 @@
 * @brief Lift implementation
 */
 #include "main.h"
+#include "lift.h"
+#include "button.h"
+#include "doors.h"
+#include "floor.h"
+#include "led.h"
+#include "motor.h"
+#include "timer.h"
+
+
 /**
 * @brief Initialize the lift
 * @param void
 * @return void
 */
-void lift_Init(void){}
+void lift_Init(void){
+	Button_H_Init();
+	Doors_H_Init();
+	floor_Init();
+	Led_H_Init();
+	motor_H_Init();
+	Timers_Init();
+
+}
 /**
 * @brief Control the lift to go up
 * @return void

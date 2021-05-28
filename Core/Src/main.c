@@ -22,10 +22,15 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "lift.h"
+#include "button.h"
+#include "doors.h"
+#include "floor.h"
 #include "led.h"
+#include "motor.h"
+#include "timer.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -91,7 +96,6 @@ int main(void)
   MX_TIM4_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-	Led_H_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
