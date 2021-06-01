@@ -8,33 +8,8 @@
 
 #include "led.h"
 
-TIM_HandleTypeDef htim4;
+extern TIM_HandleTypeDef htim4;
 
-//LED on
-/**
-* @brief Led On
-* @param LED_GPIO
-* @return None
-*/
-void Led_on(int LED_GPIO){}
-
-//LED off
-/**
-* @brief Led Off
-* @param LED_GPIO
-* @return None
-*/
-void Led_off(int LED_GPIO){}
-
-//Toggle LED with spec on and off time
-/**
-* @brief Led toggle
-* @param int LED_GPIO, float t_on, float t_off
-* @return None
-*/
-void Led_toggle(int LED_GPIO, float t_on, float t_off){}
-
-	
 void LedOrange_pwm_OnValue_percent(uint8_t value){
 
 	uint32_t Pulse = 0;
