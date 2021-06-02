@@ -19,18 +19,15 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "tim.h"
-#include "usart.h"
-#include "gpio.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "lift.h"
 #include "button.h"
+#include "timer.h"
 #include "doors.h"
 #include "floor.h"
 #include "led.h"
 #include "motor.h"
-#include "timer.h"
+#include "lift.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -50,7 +47,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+uint8_t flag_button=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -61,6 +58,9 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+	flag_button=1;
+}
 
 /* USER CODE END 0 */
 
@@ -91,19 +91,30 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
-  MX_GPIO_Init();
+  /*MX_GPIO_Init();
   MX_TIM1_Init();
   MX_TIM4_Init();
-  MX_USART2_UART_Init();
+  MX_USART2_UART_Init();*/
   /* USER CODE BEGIN 2 */
   /* USER CODE END 2 */
-
+	lift_Init();
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
-
+		if(flag_button==1){
+			HAL_NVIC_DisableIRQ(EXTI0_IRQn);
+			if(liftFloor()==0){
+				//close door, move up
+			}
+			else if(liftFloor()==1){
+			}
+			else{
+				
+			}
+		}
+			
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

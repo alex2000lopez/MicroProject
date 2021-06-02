@@ -6,9 +6,12 @@
 * @return void
 */
 TIM_HandleTypeDef htim1;
+TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim4;
 
-void Timer1_Init(void){
+void Timer1_Init(void){//Inicializar doorground open and door1stfloor closed.
+	__HAL_RCC_TIM1_CLK_ENABLE();
+	
 	TIM_ClockConfigTypeDef sClockSourceConfig = {0};
   TIM_MasterConfigTypeDef sMasterConfig = {0};
   TIM_OC_InitTypeDef sConfigOC = {0};
@@ -53,7 +56,7 @@ void Timer1_Init(void){
   HAL_TIM_MspPostInit(&htim1);
 }
 void Timer4_Init(void){
-
+	__HAL_RCC_TIM4_CLK_ENABLE();
 	TIM_MasterConfigTypeDef sMasterConfig = {0};
   TIM_OC_InitTypeDef sConfigOC = {0};
 
@@ -80,7 +83,32 @@ void Timer4_Init(void){
 	
   HAL_TIM_MspPostInit(&htim4);
 }
-	
+
+void Timer3_Init(void){
+	__HAL_RCC_TIM3_CLK_ENABLE();
+	TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_IC_InitTypeDef sConfigIC = {0};
+
+  htim3.Instance = TIM3;
+  htim3.Init.Prescaler = 50000;
+  htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim3.Init.Period = 5000;
+  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  HAL_TIM_IC_Init(&htim3);
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig);
+  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
+  sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
+  sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
+  sConfigIC.ICFilter = 0;
+  HAL_TIM_IC_ConfigChannel(&htim3, &sConfigIC, TIM_CHANNEL_1);
+}
+
+void Systick_Init(void){
+	HAL_SYSTICK_Config(SystemCoreClock);
+}
 	
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef* timHandle)
 {

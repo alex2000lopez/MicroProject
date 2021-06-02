@@ -8,6 +8,7 @@
 #include "motor.h"
 
 UART_HandleTypeDef huart2;
+uint8_t step_positions[8]={0x09,0x08,0x0C,0x04,0x06,0x02,0x03,0x01};
 
 /**
 * @brief Initialize motor hardware
@@ -40,19 +41,25 @@ void motor_H_Init(void){
 * @brief motor stop
 * @return void
 */
-void motorStop(void){}
+void motorStop(void){
+
+}
 
 //Spinning clockwise
 /**
 * @brief motor spinning clockwise
 * @return void
 */
-void motorSpinClock(void){}
+void motorSpinClock(void){
+
+}
 
 //Spinning counter-clockwise
 /**
 * @brief motor spinning counter-clockwise
 * @return void
 */
-void motorSpinCClock(void){}
+void motorSpinCClock(void){
+
+}
 	
