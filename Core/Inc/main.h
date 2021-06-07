@@ -33,6 +33,32 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include <stdbool.h>
+
+/* Shared Variables Declaration*/
+extern bool buttonPressFlag;
+extern bool timer100msEndFlag;
+extern bool timer5sEndFlag;
+
+extern uint8_t step_positions[8];
+extern uint8_t step_index;
+
+typedef enum{
+
+	GROUND_FLOOR,
+	FIRST_FLOOR,
+	MOVING
+} 
+NUMBER_FLOOR;
+
+extern NUMBER_FLOOR current_floor;
+
+extern bool isMoving;
+
+extern bool DirUP;
+extern bool DirDOWN;
+
+
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -68,10 +94,6 @@ void Error_Handler(void);
 #define PH1_OSC_OUT_GPIO_Port GPIOH
 #define BOOT1_Pin GPIO_PIN_2
 #define BOOT1_GPIO_Port GPIOB
-#define LD4_Pin GPIO_PIN_12
-#define LD4_GPIO_Port GPIOD
-#define LD6_Pin GPIO_PIN_15
-#define LD6_GPIO_Port GPIOD
 #define SWDIO_Pin GPIO_PIN_13
 #define SWDIO_GPIO_Port GPIOA
 #define SWCLK_Pin GPIO_PIN_14
@@ -79,6 +101,23 @@ void Error_Handler(void);
 #define SWO_Pin GPIO_PIN_3
 #define SWO_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
+
+#define LD3_Pin GPIO_PIN_13
+#define LD3_GPIO_Port GPIOD
+
+#define LD4_Pin GPIO_PIN_12
+#define LD4_GPIO_Port GPIOD
+
+#define LD5_Pin GPIO_PIN_14
+#define LD5_GPIO_Port GPIOD
+
+#define LD6_Pin GPIO_PIN_15
+#define LD6_GPIO_Port GPIOD
+
+#define Servo1_Pin GPIO_PIN_9
+#define Servo1_GPIO_Port GPIOE
+#define Servo2_Pin GPIO_PIN_11
+#define Servo2_GPIO_Port GPIOE
 
 /* USER CODE END Private defines */
 

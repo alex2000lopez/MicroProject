@@ -23,6 +23,9 @@
 #include "stm32f4xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+
+#include "lift.h"
+#include "timer.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -56,7 +59,6 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-extern TIM_HandleTypeDef htim5;
 
 /* USER CODE BEGIN EV */
 
@@ -185,11 +187,19 @@ void PendSV_Handler(void)
 void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
-	
+
   /* USER CODE END SysTick_IRQn 0 */
-
+  HAL_IncTick();
   /* USER CODE BEGIN SysTick_IRQn 1 */
-
+	
+	if(liftIsMoving() && DirUP)
+		(step_index == 7)? step_index = 0 : step_index++;
+	else if(liftIsMoving() && DirDOWN)
+		(step_index == 0)? step_index = 7 : step_index--;
+		
+		GPIOB->ODR &= ~(0xF << 12);
+		GPIOB->ODR |= step_positions[step_index] << 12;	
+		
   /* USER CODE END SysTick_IRQn 1 */
 }
 
@@ -200,35 +210,25 @@ void SysTick_Handler(void)
 /* please refer to the startup file (startup_stm32f4xx.s).                    */
 /******************************************************************************/
 
+/* USER CODE BEGIN 1 */
+
 /**
   * @brief This function handles EXTI line0 interrupt.
   */
-void EXTI0_IRQHandler(void)
-{
-  /* USER CODE BEGIN EXTI0_IRQn 0 */
+void EXTI0_IRQHandler(void){
 
-  /* USER CODE END EXTI0_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_0);
-  /* USER CODE BEGIN EXTI0_IRQn 1 */
 
-  /* USER CODE END EXTI0_IRQn 1 */
 }
 
 /**
-  * @brief This function handles TIM5 global interrupt.
+  * @brief This function handles TIM3 global interrupt.
   */
-void TIM5_IRQHandler(void)
-{
-  /* USER CODE BEGIN TIM5_IRQn 0 */
+void TIM3_IRQHandler(void){
 
-  /* USER CODE END TIM5_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim5);
-  /* USER CODE BEGIN TIM5_IRQn 1 */
-
-  /* USER CODE END TIM5_IRQn 1 */
+  HAL_TIM_IRQHandler(&htim3);
+	
 }
-
-/* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
