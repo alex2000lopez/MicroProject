@@ -18,7 +18,7 @@
 */
 void initDoorsPWM(void){
 
-		HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1); /* Initialize TIM1 Channel 1 -> Left Servo */
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1); /* Initialize TIM1 Channel 1 -> Left Servo */
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2); /* Initialize TIM1 Channel 2 -> Right Servo */
 	
 }
@@ -34,7 +34,6 @@ void Servo_PWM_Angle(uint16_t Servo, uint8_t angle){
 	
 	/* Calculate the Pulse value given a duty cycle percentage */
 	if(angle > 180) Pulse = 224;
-	else if(angle == 0) Pulse = 74;
 	else Pulse = (uint32_t)(angle * (5/6.0) + 74);  /* (5/6.0) = (224-74)/180 */
 	
 	/* Update the PWM duty cycle by modifying the CCRx value */
