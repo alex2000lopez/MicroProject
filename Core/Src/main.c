@@ -1,33 +1,26 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
-  *
-  ******************************************************************************
-  */
+* @file main.c
+* @author Alejandro López Rodríguez and Ana Maria Casanova López
+* @date 06/06/2021
+* @brief Main File
+*/
+
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "gpio.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "button.h"
+
 #include "timer.h"
-#include "doors.h"
-#include "floor.h"
+#include "uart.h"
 #include "led.h"
-#include "motor.h"
+#include "button.h"
 #include "lift.h"
+#include "doors.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,7 +40,24 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint8_t flag_button=0;
+
+volatile bool state = true;
+
+/* Definitions of extern variables declared in main.h */
+bool buttonPressFlag = false;
+bool timer5sEndFlag = false;
+bool timer100msEndFlag = false;
+
+uint8_t step_positions[8]={0x08,0x0C,0x04,0x06,0x02,0x03,0x01,0x09};
+uint8_t step_index = 0;
+
+NUMBER_FLOOR current_floor = GROUND_FLOOR;
+
+bool DirUP = true;    /* Initial State */
+bool DirDOWN = false;
+
+uint8_t UART2_rxBuffer[12] = {0};
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -58,9 +68,6 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
-	flag_button=1;
-}
 
 /* USER CODE END 0 */
 
@@ -71,7 +78,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+	
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -87,34 +94,50 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+	
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
-  /*MX_GPIO_Init();
-  MX_TIM1_Init();
-  MX_TIM4_Init();
-  MX_USART2_UART_Init();*/
+  MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-  /* USER CODE END 2 */
+	
+	/* Peripherals Initialization */
+	
+	TIM1_Init();
+  TIM3_Init();
+	TIM4_Init();
+  
+	USART2_Init();
+	
+	/* System Initialization */
 	lift_Init();
+
+  /* USER CODE END 2 */
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-    /* USER CODE END WHILE */
-		if(flag_button==1){
-			HAL_NVIC_DisableIRQ(EXTI0_IRQn);
-			if(liftFloor()==0){
-				//close door, move up
-			}
-			else if(liftFloor()==1){
-			}
-			else{
-				
-			}
-		}
+  while(1){
+		
+		/* EXTI Interrupt flag */
+		if(buttonPressFlag){
 			
+			buttonPressFlag = false;		/* Disable the flag */
+		
+			/* Go up/down depending on the current floor */
+			if(liftFloor() == 0) liftUp();
+			else if(liftFloor() == 1) liftDown();
+							
+		}
+		
+		/* TIM3 (5s) Interrupt Flag */
+		if(timer5sEndFlag){
+			
+			timer5sEndFlag = false; 		/* Disable the flag */
+			liftStop();
+		}
+		
+    /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -165,28 +188,45 @@ void SystemClock_Config(void)
 
 /* USER CODE BEGIN 4 */
 
-/* USER CODE END 4 */
+/**
+* @brief EXTI Callback Function
+* @param void
+* @return None
+*/
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+	
+	if(GPIO_Pin == GPIO_PIN_0){
+		
+		HAL_NVIC_DisableIRQ(EXTI0_IRQn);
+		buttonPressFlag = true;
+	}
+	else{
+		__NOP();
+	}
+}
 
- /**
-  * @brief  Period elapsed callback in non blocking mode
-  * @note   This function is called  when TIM5 interrupt took place, inside
-  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
-  * a global variable "uwTick" used as application time base.
-  * @param  htim : TIM handle
-  * @retval None
-  */
+
+/**
+* @brief TIM3 (5s) Callback Function
+* @param void
+* @return None
+*/
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-  /* USER CODE BEGIN Callback 0 */
+  /* Prevent unused argument(s) compilation warning */
+  UNUSED(htim);
 
-  /* USER CODE END Callback 0 */
-  if (htim->Instance == TIM5) {
-    HAL_IncTick();
-  }
-  /* USER CODE BEGIN Callback 1 */
+	if(htim-> Instance == TIM3){
+			
+			HAL_NVIC_DisableIRQ(TIM3_IRQn);
+			HAL_TIM_Base_Stop_IT(&htim3);
+			timer5sEndFlag = true;
+					
+	}
 
-  /* USER CODE END Callback 1 */
 }
+
+/* USER CODE END 4 */
 
 /**
   * @brief  This function is executed in case of error occurrence.

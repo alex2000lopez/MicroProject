@@ -1,12 +1,12 @@
 /**
-* @file button.h
+* @file uart.h
 * @author Alejandro López Rodríguez and Ana Maria Casanova López
 * @date 06/06/2021
-* @brief This file contains all the function prototypes for the button.c file
+* @brief This file contains all the function prototypes for the uart.c file
 */
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __BUTTON_H__
-#define __BUTTON_H__
+#ifndef __UART_H__
+#define __UART_H__
 
 #ifdef __cplusplus
 extern "C" {
@@ -15,12 +15,12 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
-extern void Button_Init(void);
-
+extern UART_HandleTypeDef huart2;
+void USART2_Init(void);
 
 #ifdef __cplusplus
 }
 #endif
-#endif /*__ BUTTON_H__ */
 
+#endif /* __UART_H__ */
 /* EOF */
