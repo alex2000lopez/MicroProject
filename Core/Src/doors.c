@@ -34,7 +34,7 @@ void Servo_PWM_Angle(uint16_t Servo, uint8_t angle){
 	
 	/* Calculate the Pulse value given a duty cycle percentage */
 	if(angle > 180) Pulse = 224;
-	else if(angle < 0) Pulse = 74;
+	else if(angle == 0) Pulse = 74;
 	else Pulse = (uint32_t)(angle * (5/6.0) + 74);  /* (5/6.0) = (224-74)/180 */
 	
 	/* Update the PWM duty cycle by modifying the CCRx value */
