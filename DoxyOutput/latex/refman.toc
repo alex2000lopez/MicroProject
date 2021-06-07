@@ -1,0 +1,121 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}File Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}File List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Documentation}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}button.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{3}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Detailed Description}{3}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Function Documentation}{3}{subsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.1}Button\_Init()}{3}{subsubsection.2.1.2.1}%
+\contentsline {section}{\numberline {2.2}button.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{4}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Detailed Description}{4}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Function Documentation}{4}{subsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2.1}Button\_Init()}{4}{subsubsection.2.2.2.1}%
+\contentsline {section}{\numberline {2.3}doors.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{5}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Detailed Description}{5}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Function Documentation}{5}{subsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.1}CloseDoors()}{5}{subsubsection.2.3.2.1}%
+\contentsline {subsubsection}{\numberline {2.3.2.2}Doors\_Init()}{6}{subsubsection.2.3.2.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.3}initDoorsPWM()}{6}{subsubsection.2.3.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.2.4}OpenDoors()}{6}{subsubsection.2.3.2.4}%
+\contentsline {subsubsection}{\numberline {2.3.2.5}Servo\_PWM\_Angle()}{8}{subsubsection.2.3.2.5}%
+\contentsline {section}{\numberline {2.4}doors.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{8}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Detailed Description}{9}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Function Documentation}{9}{subsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.2.1}CloseDoors()}{9}{subsubsection.2.4.2.1}%
+\contentsline {subsubsection}{\numberline {2.4.2.2}Doors\_Init()}{9}{subsubsection.2.4.2.2}%
+\contentsline {subsubsection}{\numberline {2.4.2.3}initDoorsPWM()}{10}{subsubsection.2.4.2.3}%
+\contentsline {subsubsection}{\numberline {2.4.2.4}OpenDoors()}{10}{subsubsection.2.4.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.2.5}Servo\_PWM\_Angle()}{10}{subsubsection.2.4.2.5}%
+\contentsline {section}{\numberline {2.5}gpio.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{11}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Detailed Description}{11}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Function Documentation}{11}{subsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.2.1}MX\_GPIO\_Init()}{11}{subsubsection.2.5.2.1}%
+\contentsline {section}{\numberline {2.6}gpio.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{12}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Detailed Description}{12}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Function Documentation}{12}{subsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.2.1}MX\_GPIO\_Init()}{12}{subsubsection.2.6.2.1}%
+\contentsline {section}{\numberline {2.7}led.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{13}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Detailed Description}{13}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Function Documentation}{14}{subsection.2.7.2}%
+\contentsline {subsubsection}{\numberline {2.7.2.1}FirstFloor()}{14}{subsubsection.2.7.2.1}%
+\contentsline {subsubsection}{\numberline {2.7.2.2}GroundFloor()}{14}{subsubsection.2.7.2.2}%
+\contentsline {subsubsection}{\numberline {2.7.2.3}initLEDGPIO()}{14}{subsubsection.2.7.2.3}%
+\contentsline {subsubsection}{\numberline {2.7.2.4}initLEDsPWM()}{15}{subsubsection.2.7.2.4}%
+\contentsline {subsubsection}{\numberline {2.7.2.5}LED\_Init()}{15}{subsubsection.2.7.2.5}%
+\contentsline {subsubsection}{\numberline {2.7.2.6}LED\_PWM\_Percent()}{15}{subsubsection.2.7.2.6}%
+\contentsline {subsubsection}{\numberline {2.7.2.7}Moving()}{16}{subsubsection.2.7.2.7}%
+\contentsline {subsubsection}{\numberline {2.7.2.8}TurnOffLEDPWM()}{16}{subsubsection.2.7.2.8}%
+\contentsline {section}{\numberline {2.8}led.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{16}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Detailed Description}{17}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Function Documentation}{17}{subsection.2.8.2}%
+\contentsline {subsubsection}{\numberline {2.8.2.1}FirstFloor()}{17}{subsubsection.2.8.2.1}%
+\contentsline {subsubsection}{\numberline {2.8.2.2}GroundFloor()}{18}{subsubsection.2.8.2.2}%
+\contentsline {subsubsection}{\numberline {2.8.2.3}initLEDGPIO()}{18}{subsubsection.2.8.2.3}%
+\contentsline {subsubsection}{\numberline {2.8.2.4}initLEDsPWM()}{18}{subsubsection.2.8.2.4}%
+\contentsline {subsubsection}{\numberline {2.8.2.5}LED\_Init()}{19}{subsubsection.2.8.2.5}%
+\contentsline {subsubsection}{\numberline {2.8.2.6}LED\_PWM\_Percent()}{19}{subsubsection.2.8.2.6}%
+\contentsline {subsubsection}{\numberline {2.8.2.7}Moving()}{20}{subsubsection.2.8.2.7}%
+\contentsline {subsubsection}{\numberline {2.8.2.8}TurnOffLEDPWM()}{20}{subsubsection.2.8.2.8}%
+\contentsline {section}{\numberline {2.9}lift.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{20}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Detailed Description}{21}{subsection.2.9.1}%
+\contentsline {subsection}{\numberline {2.9.2}Function Documentation}{21}{subsection.2.9.2}%
+\contentsline {subsubsection}{\numberline {2.9.2.1}lift\_Init()}{21}{subsubsection.2.9.2.1}%
+\contentsline {subsubsection}{\numberline {2.9.2.2}liftDown()}{22}{subsubsection.2.9.2.2}%
+\contentsline {subsubsection}{\numberline {2.9.2.3}liftFloor()}{22}{subsubsection.2.9.2.3}%
+\contentsline {subsubsection}{\numberline {2.9.2.4}liftIsMoving()}{22}{subsubsection.2.9.2.4}%
+\contentsline {subsubsection}{\numberline {2.9.2.5}liftStop()}{23}{subsubsection.2.9.2.5}%
+\contentsline {subsubsection}{\numberline {2.9.2.6}liftUp()}{23}{subsubsection.2.9.2.6}%
+\contentsline {section}{\numberline {2.10}lift.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{23}{section.2.10}%
+\contentsline {subsection}{\numberline {2.10.1}Detailed Description}{24}{subsection.2.10.1}%
+\contentsline {subsection}{\numberline {2.10.2}Function Documentation}{24}{subsection.2.10.2}%
+\contentsline {subsubsection}{\numberline {2.10.2.1}lift\_Init()}{24}{subsubsection.2.10.2.1}%
+\contentsline {subsubsection}{\numberline {2.10.2.2}liftDown()}{24}{subsubsection.2.10.2.2}%
+\contentsline {subsubsection}{\numberline {2.10.2.3}liftFloor()}{25}{subsubsection.2.10.2.3}%
+\contentsline {subsubsection}{\numberline {2.10.2.4}liftIsMoving()}{25}{subsubsection.2.10.2.4}%
+\contentsline {subsubsection}{\numberline {2.10.2.5}liftStop()}{25}{subsubsection.2.10.2.5}%
+\contentsline {subsubsection}{\numberline {2.10.2.6}liftUp()}{27}{subsubsection.2.10.2.6}%
+\contentsline {section}{\numberline {2.11}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{27}{section.2.11}%
+\contentsline {subsection}{\numberline {2.11.1}Detailed Description}{28}{subsection.2.11.1}%
+\contentsline {subsection}{\numberline {2.11.2}Function Documentation}{28}{subsection.2.11.2}%
+\contentsline {subsubsection}{\numberline {2.11.2.1}Error\_Handler()}{28}{subsubsection.2.11.2.1}%
+\contentsline {subsubsection}{\numberline {2.11.2.2}HAL\_GPIO\_EXTI\_Callback()}{28}{subsubsection.2.11.2.2}%
+\contentsline {subsubsection}{\numberline {2.11.2.3}HAL\_TIM\_PeriodElapsedCallback()}{29}{subsubsection.2.11.2.3}%
+\contentsline {subsubsection}{\numberline {2.11.2.4}main()}{29}{subsubsection.2.11.2.4}%
+\contentsline {subsubsection}{\numberline {2.11.2.5}SystemClock\_Config()}{29}{subsubsection.2.11.2.5}%
+\contentsline {section}{\numberline {2.12}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{30}{section.2.12}%
+\contentsline {subsection}{\numberline {2.12.1}Detailed Description}{31}{subsection.2.12.1}%
+\contentsline {subsection}{\numberline {2.12.2}Function Documentation}{31}{subsection.2.12.2}%
+\contentsline {subsubsection}{\numberline {2.12.2.1}Error\_Handler()}{31}{subsubsection.2.12.2.1}%
+\contentsline {section}{\numberline {2.13}motor.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{32}{section.2.13}%
+\contentsline {subsection}{\numberline {2.13.1}Detailed Description}{32}{subsection.2.13.1}%
+\contentsline {subsection}{\numberline {2.13.2}Function Documentation}{32}{subsection.2.13.2}%
+\contentsline {subsubsection}{\numberline {2.13.2.1}Motor\_Init()}{32}{subsubsection.2.13.2.1}%
+\contentsline {section}{\numberline {2.14}motor.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{33}{section.2.14}%
+\contentsline {subsection}{\numberline {2.14.1}Detailed Description}{33}{subsection.2.14.1}%
+\contentsline {subsection}{\numberline {2.14.2}Function Documentation}{33}{subsection.2.14.2}%
+\contentsline {subsubsection}{\numberline {2.14.2.1}Motor\_Init()}{33}{subsubsection.2.14.2.1}%
+\contentsline {section}{\numberline {2.15}Sys\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tick\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{34}{section.2.15}%
+\contentsline {subsection}{\numberline {2.15.1}Detailed Description}{34}{subsection.2.15.1}%
+\contentsline {subsection}{\numberline {2.15.2}Function Documentation}{34}{subsection.2.15.2}%
+\contentsline {subsubsection}{\numberline {2.15.2.1}SysTick\_Handler()}{34}{subsubsection.2.15.2.1}%
+\contentsline {section}{\numberline {2.16}timer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{34}{section.2.16}%
+\contentsline {subsection}{\numberline {2.16.1}Detailed Description}{35}{subsection.2.16.1}%
+\contentsline {subsection}{\numberline {2.16.2}Function Documentation}{35}{subsection.2.16.2}%
+\contentsline {subsubsection}{\numberline {2.16.2.1}TIM1\_Init()}{35}{subsubsection.2.16.2.1}%
+\contentsline {subsubsection}{\numberline {2.16.2.2}TIM3\_Init()}{36}{subsubsection.2.16.2.2}%
+\contentsline {subsubsection}{\numberline {2.16.2.3}TIM4\_Init()}{36}{subsubsection.2.16.2.3}%
+\contentsline {section}{\numberline {2.17}timer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{36}{section.2.17}%
+\contentsline {subsection}{\numberline {2.17.1}Detailed Description}{37}{subsection.2.17.1}%
+\contentsline {subsection}{\numberline {2.17.2}Function Documentation}{37}{subsection.2.17.2}%
+\contentsline {subsubsection}{\numberline {2.17.2.1}TIM1\_Init()}{37}{subsubsection.2.17.2.1}%
+\contentsline {subsubsection}{\numberline {2.17.2.2}TIM3\_Init()}{38}{subsubsection.2.17.2.2}%
+\contentsline {subsubsection}{\numberline {2.17.2.3}TIM4\_Init()}{38}{subsubsection.2.17.2.3}%
+\contentsline {section}{\numberline {2.18}uart.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{38}{section.2.18}%
+\contentsline {subsection}{\numberline {2.18.1}Detailed Description}{39}{subsection.2.18.1}%
+\contentsline {subsection}{\numberline {2.18.2}Function Documentation}{39}{subsection.2.18.2}%
+\contentsline {subsubsection}{\numberline {2.18.2.1}USART2\_Init()}{39}{subsubsection.2.18.2.1}%
+\contentsline {section}{\numberline {2.19}uart.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{39}{section.2.19}%
+\contentsline {subsection}{\numberline {2.19.1}Detailed Description}{40}{subsection.2.19.1}%
+\contentsline {subsection}{\numberline {2.19.2}Function Documentation}{40}{subsection.2.19.2}%
+\contentsline {subsubsection}{\numberline {2.19.2.1}USART2\_Init()}{40}{subsubsection.2.19.2.1}%
+\contentsline {chapter}{Index}{41}{section*.31}%
