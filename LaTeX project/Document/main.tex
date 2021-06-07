@@ -1,0 +1,207 @@
+\documentclass[a4paper, 11pt, oneside]{article} 
+
+\usepackage[a4paper,bindingoffset=0.2in,%
+            left=1in,right=1in,top=1in,bottom=1in,%
+            footskip=.25in]{geometry}
+
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+% Custom titling format
+
+\usepackage{secdot}
+\usepackage{titling}
+\usepackage[margin=1.5in]{geometry}
+\date{\today}
+
+% Remove numbering from sections but keep them in TOC
+
+\makeatletter
+\def\@seccntformat#1{%
+  \expandafter\ifx\csname c@#1\endcsname\c@section\else
+  \csname the#1\endcsname\quad
+  \fi}
+\makeatother
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{animate}
+\usepackage{floatrow}
+\usepackage{caption}
+\usepackage{booktabs}
+
+\usepackage[bottom]{footmisc}
+
+% Importing graphics
+
+\usepackage{svg}
+\usepackage{siunitx}
+\usepackage{tikz} 
+\usepackage{pgfplots}
+
+% Allows to place the legend below plot
+
+\pgfplotsset{compat=newest} 
+
+% Allows to enter the units nicely
+
+\usepgfplotslibrary{units} 
+
+% Bold and italics math
+
+\usepackage{bm}
+
+
+% Cute boxes
+
+\usepackage{xcolor}
+\usepackage[framemethod=default]{mdframed}
+
+\newmdenv[skipabove=7pt,
+          skipbelow=7pt,
+          rightline=false,
+          leftline=true,
+          topline=false,
+          bottomline=false,
+          linecolor=red!60!gray,
+          backgroundcolor=gray!15,
+          innerleftmargin=5pt,
+          innerrightmargin=2pt,
+          innertopmargin=5pt,
+          leftmargin=0cm,
+          rightmargin=0cm,
+          linewidth=3pt,
+          innerbottommargin=5pt]{cBox}
+      
+      
+% Setting for writing code
+      
+\usepackage{minted}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{beramono}
+
+% Minted for VHDL
+
+\newenvironment{code}[2][]
+ {\VerbatimEnvironment
+  \begin{minted}[
+        frame=lines,
+        framesep=2mm,
+        baselinestretch=1.2,
+        bgcolor=bg,
+        linenos,
+        fontsize=\footnotesize
+        ]{#2}}
+ {\end{minted}}
+ 
+ \newcommand{\inputcode}[2][vhdl]{\inputminted[frame=lines,
+                                              framesep=2mm,
+                                              baselinestretch=1.2,
+                                              bgcolor=bg,
+                                              linenos,
+                                              fontsize=\scriptsize
+                                              ]{#1}{#2}}
+% Minted for C
+
+\newcommand{\inputCcode}[2][c]{\inputminted[frame=lines,
+                                           framesep=2mm,
+                                           baselinestretch=1.2,
+                                           bgcolor=bg,
+                                           linenos,
+                                           fontsize=\scriptsize,
+                                           obeytabs=true,
+                                           tabsize=4
+                                           ]{#1}{#2}}
+
+
+
+%% Defines background colour of code
+\definecolor{bg}{rgb}{0.95, 0.95, 0.95}
+ 
+%% Adds the º symbol
+\usepackage{gensymb}
+
+% Includes "References" in the table of contents
+
+\usepackage[nottoc]{tocbibind}
+
+\usepackage[autostyle = true]{csquotes}
+
+\usepackage[backend=biber,style=ieee]{biblatex}
+\urlstyle{same}
+\addbibresource{bibliography.bib}
+
+%% Allows subsubsubsections
+ 
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0ex}%
+    {-3.25ex plus -1ex minus -0.2ex}%
+    {1.5ex plus 0.2ex}%
+    {\normalfont\normalsize\bfseries}}
+\makeatother
+ 
+\stepcounter{secnumdepth}
+\stepcounter{tocdepth}
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+% Hyperlinks settings
+
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=false,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\usepackage{array}
+\usepackage{booktabs}
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT
+%----------------------------------------------------------------------------------------
+
+\begin{document} 
+
+% ANIMATION ON = 1 / ANIMATION OFF = 0
+\newcounter{ANIMATION}
+\setcounter{ANIMATION}{1}
+
+% Includes the title page
+\include{Title_Page}
+
+
+% Table of contents
+
+\thispagestyle{empty}
+\setcounter{page}{0}
+{
+  \tableofcontents
+  \pagenumbering{gobble}
+}
+\clearpage
+
+% Add later
+
+% \listoffigures
+% \listoftables
+% \clearpage
+
+% Document
+
+
+\pagenumbering{arabic}
+\include{Intro}
+
+\addcontentsline{toc}{section}{References}
+
+
+\printbibliography
+\end{document}
+
