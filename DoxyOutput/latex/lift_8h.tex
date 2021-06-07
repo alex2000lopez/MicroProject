@@ -1,0 +1,145 @@
+\hypertarget{lift_8h}{}\doxysection{lift.\+h File Reference}
+\label{lift_8h}\index{lift.h@{lift.h}}
+
+
+This file contains all the function prototypes for the \mbox{\hyperlink{lift_8c}{lift.\+c}} file.  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{lift_8h_a70f7530a98aad8953df601b635b9550c}{lift\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Main Init -\/$>$ Initialize the lift by calling the required sub-\/functions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lift_8h_a9fae6afbe11cc0f5a6af7c12c391a545}{lift\+Up}} (void)
+\begin{DoxyCompactList}\small\item\em Control the lift to go up and indicate it via the UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lift_8h_a094133bd94d990d3fc1f630d0a3dce10}{lift\+Down}} (void)
+\begin{DoxyCompactList}\small\item\em Control the lift to go down and indicate it via the UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lift_8h_a697f6756881e7b7f8d957cb9a8e2fbeb}{lift\+Stop}} (void)
+\begin{DoxyCompactList}\small\item\em Stop the lift, open the doors and send the current floor via UART. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{lift_8h_a6c391cc4cf81f6b9befde3df5dfcd744}{lift\+Is\+Moving}} (void)
+\begin{DoxyCompactList}\small\item\em Retrieve whether the lift is moving or stopped. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{lift_8h_aff4a4a9901e882aa6c44adf18bfb18c7}{lift\+Floor}} (void)
+\begin{DoxyCompactList}\small\item\em Retrieve the floor where the lift is. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the function prototypes for the \mbox{\hyperlink{lift_8c}{lift.\+c}} file. 
+
+\begin{DoxyAuthor}{Author}
+Alejandro López Rodríguez and Ana Maria Casanova López 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/06/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lift_8h_a70f7530a98aad8953df601b635b9550c}\label{lift_8h_a70f7530a98aad8953df601b635b9550c}} 
+\index{lift.h@{lift.h}!lift\_Init@{lift\_Init}}
+\index{lift\_Init@{lift\_Init}!lift.h@{lift.h}}
+\doxysubsubsection{\texorpdfstring{lift\_Init()}{lift\_Init()}}
+{\footnotesize\ttfamily void lift\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Main Init -\/$>$ Initialize the lift by calling the required sub-\/functions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lift_8h_a094133bd94d990d3fc1f630d0a3dce10}\label{lift_8h_a094133bd94d990d3fc1f630d0a3dce10}} 
+\index{lift.h@{lift.h}!liftDown@{liftDown}}
+\index{liftDown@{liftDown}!lift.h@{lift.h}}
+\doxysubsubsection{\texorpdfstring{liftDown()}{liftDown()}}
+{\footnotesize\ttfamily void lift\+Down (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Control the lift to go down and indicate it via the UART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lift_8h_aff4a4a9901e882aa6c44adf18bfb18c7}\label{lift_8h_aff4a4a9901e882aa6c44adf18bfb18c7}} 
+\index{lift.h@{lift.h}!liftFloor@{liftFloor}}
+\index{liftFloor@{liftFloor}!lift.h@{lift.h}}
+\doxysubsubsection{\texorpdfstring{liftFloor()}{liftFloor()}}
+{\footnotesize\ttfamily int32\+\_\+t lift\+Floor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Retrieve the floor where the lift is. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 ground floor, 1 first floor, -\/1 moving 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lift_8h_a6c391cc4cf81f6b9befde3df5dfcd744}\label{lift_8h_a6c391cc4cf81f6b9befde3df5dfcd744}} 
+\index{lift.h@{lift.h}!liftIsMoving@{liftIsMoving}}
+\index{liftIsMoving@{liftIsMoving}!lift.h@{lift.h}}
+\doxysubsubsection{\texorpdfstring{liftIsMoving()}{liftIsMoving()}}
+{\footnotesize\ttfamily uint32\+\_\+t lift\+Is\+Moving (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Retrieve whether the lift is moving or stopped. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if it is moving, 0 if it is stopped 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lift_8h_a697f6756881e7b7f8d957cb9a8e2fbeb}\label{lift_8h_a697f6756881e7b7f8d957cb9a8e2fbeb}} 
+\index{lift.h@{lift.h}!liftStop@{liftStop}}
+\index{liftStop@{liftStop}!lift.h@{lift.h}}
+\doxysubsubsection{\texorpdfstring{liftStop()}{liftStop()}}
+{\footnotesize\ttfamily void lift\+Stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Stop the lift, open the doors and send the current floor via UART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lift_8h_a9fae6afbe11cc0f5a6af7c12c391a545}\label{lift_8h_a9fae6afbe11cc0f5a6af7c12c391a545}} 
+\index{lift.h@{lift.h}!liftUp@{liftUp}}
+\index{liftUp@{liftUp}!lift.h@{lift.h}}
+\doxysubsubsection{\texorpdfstring{liftUp()}{liftUp()}}
+{\footnotesize\ttfamily void lift\+Up (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Control the lift to go up and indicate it via the UART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

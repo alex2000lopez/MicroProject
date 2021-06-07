@@ -1,0 +1,212 @@
+\begin{theindex}
+
+  \item {button.c}, \hyperpage{3}
+    \subitem {Button\_Init}, \hyperpage{3}
+  \item {button.h}, \hyperpage{4}
+    \subitem {Button\_Init}, \hyperpage{4}
+  \item {Button\_Init}
+    \subitem {button.c}, \hyperpage{3}
+    \subitem {button.h}, \hyperpage{4}
+
+  \indexspace
+
+  \item {CloseDoors}
+    \subitem {doors.c}, \hyperpage{5}
+    \subitem {doors.h}, \hyperpage{9}
+
+  \indexspace
+
+  \item {doors.c}, \hyperpage{5}
+    \subitem {CloseDoors}, \hyperpage{5}
+    \subitem {Doors\_Init}, \hyperpage{6}
+    \subitem {initDoorsPWM}, \hyperpage{6}
+    \subitem {OpenDoors}, \hyperpage{6}
+    \subitem {Servo\_PWM\_Angle}, \hyperpage{8}
+  \item {doors.h}, \hyperpage{8}
+    \subitem {CloseDoors}, \hyperpage{9}
+    \subitem {Doors\_Init}, \hyperpage{9}
+    \subitem {initDoorsPWM}, \hyperpage{10}
+    \subitem {OpenDoors}, \hyperpage{10}
+    \subitem {Servo\_PWM\_Angle}, \hyperpage{10}
+  \item {Doors\_Init}
+    \subitem {doors.c}, \hyperpage{6}
+    \subitem {doors.h}, \hyperpage{9}
+
+  \indexspace
+
+  \item {Error\_Handler}
+    \subitem {main.c}, \hyperpage{28}
+    \subitem {main.h}, \hyperpage{31}
+
+  \indexspace
+
+  \item {FirstFloor}
+    \subitem {led.c}, \hyperpage{14}
+    \subitem {led.h}, \hyperpage{17}
+
+  \indexspace
+
+  \item {gpio.c}, \hyperpage{11}
+    \subitem {MX\_GPIO\_Init}, \hyperpage{11}
+  \item {gpio.h}, \hyperpage{12}
+    \subitem {MX\_GPIO\_Init}, \hyperpage{12}
+  \item {GroundFloor}
+    \subitem {led.c}, \hyperpage{14}
+    \subitem {led.h}, \hyperpage{18}
+
+  \indexspace
+
+  \item {HAL\_GPIO\_EXTI\_Callback}
+    \subitem {main.c}, \hyperpage{28}
+  \item {HAL\_TIM\_PeriodElapsedCallback}
+    \subitem {main.c}, \hyperpage{29}
+
+  \indexspace
+
+  \item {initDoorsPWM}
+    \subitem {doors.c}, \hyperpage{6}
+    \subitem {doors.h}, \hyperpage{10}
+  \item {initLEDGPIO}
+    \subitem {led.c}, \hyperpage{14}
+    \subitem {led.h}, \hyperpage{18}
+  \item {initLEDsPWM}
+    \subitem {led.c}, \hyperpage{15}
+    \subitem {led.h}, \hyperpage{18}
+
+  \indexspace
+
+  \item {led.c}, \hyperpage{13}
+    \subitem {FirstFloor}, \hyperpage{14}
+    \subitem {GroundFloor}, \hyperpage{14}
+    \subitem {initLEDGPIO}, \hyperpage{14}
+    \subitem {initLEDsPWM}, \hyperpage{15}
+    \subitem {LED\_Init}, \hyperpage{15}
+    \subitem {LED\_PWM\_Percent}, \hyperpage{15}
+    \subitem {Moving}, \hyperpage{16}
+    \subitem {TurnOffLEDPWM}, \hyperpage{16}
+  \item {led.h}, \hyperpage{16}
+    \subitem {FirstFloor}, \hyperpage{17}
+    \subitem {GroundFloor}, \hyperpage{18}
+    \subitem {initLEDGPIO}, \hyperpage{18}
+    \subitem {initLEDsPWM}, \hyperpage{18}
+    \subitem {LED\_Init}, \hyperpage{19}
+    \subitem {LED\_PWM\_Percent}, \hyperpage{19}
+    \subitem {Moving}, \hyperpage{19}
+    \subitem {TurnOffLEDPWM}, \hyperpage{20}
+  \item {LED\_Init}
+    \subitem {led.c}, \hyperpage{15}
+    \subitem {led.h}, \hyperpage{19}
+  \item {LED\_PWM\_Percent}
+    \subitem {led.c}, \hyperpage{15}
+    \subitem {led.h}, \hyperpage{19}
+  \item {lift.c}, \hyperpage{20}
+    \subitem {lift\_Init}, \hyperpage{21}
+    \subitem {liftDown}, \hyperpage{21}
+    \subitem {liftFloor}, \hyperpage{22}
+    \subitem {liftIsMoving}, \hyperpage{22}
+    \subitem {liftStop}, \hyperpage{23}
+    \subitem {liftUp}, \hyperpage{23}
+  \item {lift.h}, \hyperpage{23}
+    \subitem {lift\_Init}, \hyperpage{24}
+    \subitem {liftDown}, \hyperpage{24}
+    \subitem {liftFloor}, \hyperpage{25}
+    \subitem {liftIsMoving}, \hyperpage{25}
+    \subitem {liftStop}, \hyperpage{25}
+    \subitem {liftUp}, \hyperpage{27}
+  \item {lift\_Init}
+    \subitem {lift.c}, \hyperpage{21}
+    \subitem {lift.h}, \hyperpage{24}
+  \item {liftDown}
+    \subitem {lift.c}, \hyperpage{21}
+    \subitem {lift.h}, \hyperpage{24}
+  \item {liftFloor}
+    \subitem {lift.c}, \hyperpage{22}
+    \subitem {lift.h}, \hyperpage{25}
+  \item {liftIsMoving}
+    \subitem {lift.c}, \hyperpage{22}
+    \subitem {lift.h}, \hyperpage{25}
+  \item {liftStop}
+    \subitem {lift.c}, \hyperpage{23}
+    \subitem {lift.h}, \hyperpage{25}
+  \item {liftUp}
+    \subitem {lift.c}, \hyperpage{23}
+    \subitem {lift.h}, \hyperpage{27}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.c}, \hyperpage{29}
+  \item {main.c}, \hyperpage{27}
+    \subitem {Error\_Handler}, \hyperpage{28}
+    \subitem {HAL\_GPIO\_EXTI\_Callback}, \hyperpage{28}
+    \subitem {HAL\_TIM\_PeriodElapsedCallback}, \hyperpage{29}
+    \subitem {main}, \hyperpage{29}
+    \subitem {SystemClock\_Config}, \hyperpage{29}
+  \item {main.h}, \hyperpage{30}
+    \subitem {Error\_Handler}, \hyperpage{31}
+  \item {motor.c}, \hyperpage{32}
+    \subitem {Motor\_Init}, \hyperpage{32}
+  \item {motor.h}, \hyperpage{33}
+    \subitem {Motor\_Init}, \hyperpage{33}
+  \item {Motor\_Init}
+    \subitem {motor.c}, \hyperpage{32}
+    \subitem {motor.h}, \hyperpage{33}
+  \item {Moving}
+    \subitem {led.c}, \hyperpage{16}
+    \subitem {led.h}, \hyperpage{19}
+  \item {MX\_GPIO\_Init}
+    \subitem {gpio.c}, \hyperpage{11}
+    \subitem {gpio.h}, \hyperpage{12}
+
+  \indexspace
+
+  \item {OpenDoors}
+    \subitem {doors.c}, \hyperpage{6}
+    \subitem {doors.h}, \hyperpage{10}
+
+  \indexspace
+
+  \item {Servo\_PWM\_Angle}
+    \subitem {doors.c}, \hyperpage{8}
+    \subitem {doors.h}, \hyperpage{10}
+  \item {SystemClock\_Config}
+    \subitem {main.c}, \hyperpage{29}
+  \item {SysTick\_Handler}
+    \subitem {SysTick\_Handler.c}, \hyperpage{34}
+  \item {SysTick\_Handler.c}, \hyperpage{34}
+    \subitem {SysTick\_Handler}, \hyperpage{34}
+
+  \indexspace
+
+  \item {TIM1\_Init}
+    \subitem {timer.c}, \hyperpage{35}
+    \subitem {timer.h}, \hyperpage{37}
+  \item {TIM3\_Init}
+    \subitem {timer.c}, \hyperpage{36}
+    \subitem {timer.h}, \hyperpage{37}
+  \item {TIM4\_Init}
+    \subitem {timer.c}, \hyperpage{36}
+    \subitem {timer.h}, \hyperpage{38}
+  \item {timer.c}, \hyperpage{34}
+    \subitem {TIM1\_Init}, \hyperpage{35}
+    \subitem {TIM3\_Init}, \hyperpage{36}
+    \subitem {TIM4\_Init}, \hyperpage{36}
+  \item {timer.h}, \hyperpage{36}
+    \subitem {TIM1\_Init}, \hyperpage{37}
+    \subitem {TIM3\_Init}, \hyperpage{37}
+    \subitem {TIM4\_Init}, \hyperpage{38}
+  \item {TurnOffLEDPWM}
+    \subitem {led.c}, \hyperpage{16}
+    \subitem {led.h}, \hyperpage{20}
+
+  \indexspace
+
+  \item {uart.c}, \hyperpage{38}
+    \subitem {USART2\_Init}, \hyperpage{39}
+  \item {uart.h}, \hyperpage{39}
+    \subitem {USART2\_Init}, \hyperpage{40}
+  \item {USART2\_Init}
+    \subitem {uart.c}, \hyperpage{39}
+    \subitem {uart.h}, \hyperpage{40}
+
+\end{theindex}

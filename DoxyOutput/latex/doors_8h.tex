@@ -1,0 +1,125 @@
+\hypertarget{doors_8h}{}\doxysection{doors.\+h File Reference}
+\label{doors_8h}\index{doors.h@{doors.h}}
+
+
+This file contains all the function prototypes for the \mbox{\hyperlink{doors_8c}{doors.\+c}} file.  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{doors_8h_ab7a63cdafd11759c6ae371a7a6449ee1}{init\+Doors\+PWM}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize PWM Channels 1\&2 of TIM1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{doors_8h_a47eb046e63e9c9301b9504f276469e83}{Servo\+\_\+\+PWM\+\_\+\+Angle}} (uint16\+\_\+t Servo, uint8\+\_\+t angle)
+\begin{DoxyCompactList}\small\item\em Modify the servo angle by setting the value of the CCRx register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{doors_8h_a228a7b3b924e05c50e319b3a7c804127}{Open\+Doors}} (void)
+\begin{DoxyCompactList}\small\item\em Set servo angle to open position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{doors_8h_a1148e59506a8f648b81f58a08f0b861c}{Close\+Doors}} (void)
+\begin{DoxyCompactList}\small\item\em Set servo angle to closed position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{doors_8h_a1c9f54a50b721b72535f5915246ba819}{Doors\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the door hardware and set the initial angle to \char`\"{}\+Open\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the function prototypes for the \mbox{\hyperlink{doors_8c}{doors.\+c}} file. 
+
+\begin{DoxyAuthor}{Author}
+Alejandro López Rodríguez and Ana Maria Casanova López 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/06/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{doors_8h_a1148e59506a8f648b81f58a08f0b861c}\label{doors_8h_a1148e59506a8f648b81f58a08f0b861c}} 
+\index{doors.h@{doors.h}!CloseDoors@{CloseDoors}}
+\index{CloseDoors@{CloseDoors}!doors.h@{doors.h}}
+\doxysubsubsection{\texorpdfstring{CloseDoors()}{CloseDoors()}}
+{\footnotesize\ttfamily void Close\+Doors (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Set servo angle to closed position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{doors_8h_a1c9f54a50b721b72535f5915246ba819}\label{doors_8h_a1c9f54a50b721b72535f5915246ba819}} 
+\index{doors.h@{doors.h}!Doors\_Init@{Doors\_Init}}
+\index{Doors\_Init@{Doors\_Init}!doors.h@{doors.h}}
+\doxysubsubsection{\texorpdfstring{Doors\_Init()}{Doors\_Init()}}
+{\footnotesize\ttfamily void Doors\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the door hardware and set the initial angle to \char`\"{}\+Open\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{doors_8h_ab7a63cdafd11759c6ae371a7a6449ee1}\label{doors_8h_ab7a63cdafd11759c6ae371a7a6449ee1}} 
+\index{doors.h@{doors.h}!initDoorsPWM@{initDoorsPWM}}
+\index{initDoorsPWM@{initDoorsPWM}!doors.h@{doors.h}}
+\doxysubsubsection{\texorpdfstring{initDoorsPWM()}{initDoorsPWM()}}
+{\footnotesize\ttfamily void init\+Doors\+PWM (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize PWM Channels 1\&2 of TIM1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{doors_8h_a228a7b3b924e05c50e319b3a7c804127}\label{doors_8h_a228a7b3b924e05c50e319b3a7c804127}} 
+\index{doors.h@{doors.h}!OpenDoors@{OpenDoors}}
+\index{OpenDoors@{OpenDoors}!doors.h@{doors.h}}
+\doxysubsubsection{\texorpdfstring{OpenDoors()}{OpenDoors()}}
+{\footnotesize\ttfamily void Open\+Doors (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Set servo angle to open position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{doors_8h_a47eb046e63e9c9301b9504f276469e83}\label{doors_8h_a47eb046e63e9c9301b9504f276469e83}} 
+\index{doors.h@{doors.h}!Servo\_PWM\_Angle@{Servo\_PWM\_Angle}}
+\index{Servo\_PWM\_Angle@{Servo\_PWM\_Angle}!doors.h@{doors.h}}
+\doxysubsubsection{\texorpdfstring{Servo\_PWM\_Angle()}{Servo\_PWM\_Angle()}}
+{\footnotesize\ttfamily void Servo\+\_\+\+PWM\+\_\+\+Angle (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Servo,  }\item[{uint8\+\_\+t}]{angle }\end{DoxyParamCaption})}
+
+
+
+Modify the servo angle by setting the value of the CCRx register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint16\+\_\+t} & Servo, uint8\+\_\+t angle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
